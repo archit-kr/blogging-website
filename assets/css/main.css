@@ -1,5 +1,6 @@
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
 /* Custom properties */
 :root {
     --light-color: #ffffff;
@@ -30,6 +31,7 @@
     --item-min-height-sm: 20rem;
     --item-min-height-md: 30rem;
 }
+
 /* Base styles */
 * {
     margin: 0;
@@ -212,8 +214,8 @@ body.light-theme {
     left: 0;
     z-index: 9999;
     display: flex;
-    /* opacity: 0;
-    transform: scale(0); */
+    opacity: 0;
+    transform: scale(0);
     transition: opacity 0.5s;
 }
 
@@ -233,19 +235,23 @@ body.light-theme {
 .form-input,
 .form-button {
     display: inline-block;
+    outline: none;
     border: 2px solid var(--secondary-background-color);
     padding: 1.5rem;
+    color: var(--light-color-alt);
 }
 
 .form-input {
     border-right: none;
     width: 100%;
+    background-color: var(--primary-background-color);
 }
 
 .form-btn {
-    /* margin-left: -0.5rem;
-    border-left: none; */
+    margin-left: -0.5rem;
+    border-left: none;
     background-color: var(--secondary-background-color);
+    text-transform: uppercase;
     width: 8rem;
 }
 
